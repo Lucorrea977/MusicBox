@@ -1,1 +1,43 @@
-node_modules
+# Node modules: Ignorar las dependencias instaladas
+node_modules/
+
+# Archivos de log generados por npm/yarn
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Directorios de compilación y distribución
+build/
+dist/
+
+# Archivos de configuración específicos del sistema operativo
+.DS_Store   # macOS
+Thumbs.db   # Windows
+
+# Archivos de configuración de entorno
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Configuración de IDE (ej. VSCode)
+.vscode/
+.idea/
+
+# Dependencias de Tailwind y configuraciones de PostCSS
+postcss.config.js
+tailwind.config.js
+
+# Otros archivos temporales generados por el editor o el sistema
+*.log
+*.lock
+
+# Archivos generados por react-scripts
+build/
+
+# Si usas algún sistema de empaquetado o caché
+.cache/
+
+# Si no deseas que se suban imágenes o archivos estáticos específicos de pruebas
+public/static/
