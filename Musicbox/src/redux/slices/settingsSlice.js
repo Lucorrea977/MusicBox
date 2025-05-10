@@ -1,20 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const settingsSlice = createSlice({
-  name: 'settings',
-  initialState: {
-    theme: 'dark', // opciones: dark, light, soft
-    color: '#1e90ff', // azul por defecto
-  },
+  name: "settings",
+  initialState: { theme: "black" },
   reducers: {
-    setTheme: (state, action) => {
+    setTheme(state, action) {
       state.theme = action.payload;
-    },
-    setColor: (state, action) => {
-      state.color = action.payload;
     },
   },
 });
 
-export const { setTheme, setColor } = settingsSlice.actions;
+export const { setTheme } = settingsSlice.actions;
 export default settingsSlice.reducer;
