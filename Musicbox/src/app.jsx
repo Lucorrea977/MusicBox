@@ -1,23 +1,25 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./views/Home";
-import Library from "./views/Library";
-import Config from "./views/Config";
+
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { useSelector } from "react-redux";
+import Home from "./views/Home";
+import Favorites from "./views/Favorites";
+import Settings from "./views/Settings";
+import Playlists from "./views/Playlists";
+import Player from "./components/Player";
 
 function App() {
-  const { theme, color } = useSelector((state) => state.settings);
-
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'bg-black text-white' : theme === 'light' ? 'bg-white text-black' : 'bg-gray-900 text-white'}`}>
-      <BrowserRouter>
-        <Navbar />
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/library" element={<Library />} />
-          <Route path="/config" element={<Config />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/playlists" element={<Playlists />} />
         </Routes>
-      </BrowserRouter>
+      </main>
+      <Player />
     </div>
   );
 }
