@@ -1,27 +1,22 @@
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './views/Home';
+import SearchResults from './views/SearchResults';
+import Artist from './views/Artist';
+import Player from './components/Player';
 
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./views/Home";
-import Favorites from "./views/Favorites";
-import Settings from "./views/Settings";
-import Playlists from "./views/Playlists";
-import Player from "./components/Player";
-
-function App() {
+export default function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="relative bg-gradient-to-b from-gray-900 to-black min-h-screen pb-28 selection:bg-purple-500 selection:text-white"> {/* Ajusta pb según altura del Player */}
       <Navbar />
-      <main className="flex-grow">
+      <main className="pt-16"> {/* Espacio para Navbar fija */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/playlists" element={<Playlists />} />
+          <Route path="/search" element={<SearchResults />} />
+          <Route path="/artist/:handle" element={<Artist />} /> {/* :handle para el nombre de usuario */}
         </Routes>
       </main>
-      <Player />
+      <Player /> 
     </div>
   );
 }
-
-export default App;
