@@ -1,0 +1,105 @@
+
+@import './tailwind.css';
+
+body {
+  @apply bg-gray-900 text-white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Estilos personalizados para la barra de progreso (range input) */
+input[type="range"].accent-purple-500 {
+  -webkit-appearance: none; /* Quitar apariencia por defecto en WebKit/Blink */
+  appearance: none;
+  width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+  height: 6px; /* Altura de la pista */
+  background: transparent; /* Hacer la pista base transparente */
+  cursor: pointer;
+}
+
+/* Pista de la barra de progreso para WebKit/Blink (Chrome, Safari, Edge) */
+input[type="range"].accent-purple-500::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #4B5563; /* color gris para la pista (gray-600) */
+  border-radius: 3px;
+}
+
+/* "Pulgar" (thumb) de la barra de progreso para WebKit/Blink */
+input[type="range"].accent-purple-500::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  background-color: #8B5CF6; /* color morado (purple-500) */
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px; /* Ajustar para centrar el thumb en la pista */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Pista de la barra de progreso para Firefox */
+input[type="range"].accent-purple-500::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: #4B5563; /* color gris para la pista (gray-600) */
+  border-radius: 3px;
+  border: none; /* Quitar borde por defecto en Firefox */
+}
+
+/* "Pulgar" (thumb) de la barra de progreso para Firefox */
+input[type="range"].accent-purple-500::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  background-color: #8B5CF6; /* color morado (purple-500) */
+  border-radius: 50%;
+  border: none; /* Quitar borde por defecto en Firefox */
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Estilos para IE (opcional, ya que Edge moderno usa WebKit) */
+input[type="range"].accent-purple-500::-ms-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: transparent; /* Track es transparente, el color lo da fill-lower/upper */
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"].accent-purple-500::-ms-fill-lower {
+  background: #8B5CF6; /* Color de la parte "llena" */
+  border-radius: 3px;
+}
+
+input[type="range"].accent-purple-500::-ms-fill-upper {
+  background: #4B5563; /* Color de la parte "vacía" */
+  border-radius: 3px;
+}
+
+input[type="range"].accent-purple-500::-ms-thumb {
+  height: 14px;
+  width: 14px;
+  background-color: #8B5CF6;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 0px; /* IE maneja el centrado diferente */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+:root.light {
+  --tw-bg-opacity: 1;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+:root.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+:root.soft {
+  background-color: #1a1a2e;
+  color: #ddd;
+}

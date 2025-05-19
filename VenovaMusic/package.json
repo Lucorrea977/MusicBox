@@ -1,0 +1,55 @@
+{
+    "name": "venova-music",
+    "version": "1.0.0",
+    "description": "Music app.",
+    "main": "index.js",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+        "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css --watch"
+    },
+    "author": "Luana Camila Correa",
+    "license": "ISC",
+    "dependencies": {
+        "@reduxjs/toolkit": "^2.2.6",
+        "dotenv": "^16.4.5",
+        "firebase": "^11.0.2",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-icons": "^5.5.0",
+        "react-redux": "^8.1.3",
+        "react-router-dom": "^6.22.1",
+        "react-scripts": "5.0.1",
+        "react-toastify": "^11.0.5",
+        "redux-thunk": "^2.3.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.19",
+        "concurrently": "^8.2.2",
+        "cross-env": "^7.0.3",
+        "postcss": "^8.4.38",
+        "postcss-cli": "^11.0.0",
+        "tailwindcss": "^3.4.3"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
