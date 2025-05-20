@@ -2,6 +2,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchCatalog = createAsyncThunk('albums/fetchCatalog', async () => {
   const res = await fetch('/catalog.json');
+  if (!res.ok) {
+    throw new Error('Error al cargar el catálogo');
+  }
   const data = await res.json();
   return data;
 });

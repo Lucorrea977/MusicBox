@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux';
 import PlaylistManager from '../components/PlaylistManager';
 
 export default function PlaylistsView() {
-  const playlists = useSelector(state => state.playlists.items);
+const playlists = useSelector((state) => state.playlists.items);
+
 
   return (
     <div className="p-4">
