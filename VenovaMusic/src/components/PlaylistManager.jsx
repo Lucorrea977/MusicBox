@@ -21,7 +21,9 @@ export default function PlaylistManager() {
 
   return (
     <div className="p-6 max-w-xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">Playlist Manager</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+        Playlist Manager
+      </h2>
 
       <div className="flex gap-2 mb-4">
         <input
@@ -29,7 +31,7 @@ export default function PlaylistManager() {
           value={newPlaylistName}
           onChange={(e) => setNewPlaylistName(e.target.value)}
           placeholder="New playlist name"
-          className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100"
         />
         <button
           onClick={handleAddPlaylist}
@@ -57,7 +59,9 @@ export default function PlaylistManager() {
           ))}
         </ul>
       ) : (
-        <p className="text-gray-500 dark:text-gray-400 text-center">No playlists yet. Add one above!</p>
+        <p className="text-gray-500 dark:text-gray-400 text-center">
+          No playlists yet. Add one above!
+        </p>
       )}
     </div>
   );

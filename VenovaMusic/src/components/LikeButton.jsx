@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleLike } from '../redux/likesSlice';
+import { toggleLike } from '../redux/slice/likesSlice';
 
 export default function LikeButton({ songId }) {
   const dispatch = useDispatch();
